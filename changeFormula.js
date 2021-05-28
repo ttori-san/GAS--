@@ -20,18 +20,19 @@ let mm;
 // console.log(typeof(yyyy));//string
 
 function addNumber(){
-  let numYYYY = Number(yyyy);
-  let numMM = Number(mm);
-  if (numMM < 12){
+    let numYYYY = Number(yyyy);
+    let numMM = Number(mm);
+    if (numMM < 12){
     numMM++;
     numYYYY;
-  }else{
+    }else{
     numMM = 1;
     numYYYY+=1;
-  }
-  let strYYYY = String(numYYYY);
-  let strMM = String(numMM);
-  return [strYYYY, strMM];
+    }
+    numMM > 10 ? numMM:numMM= `0${numMM}`;
+    let strYYYY = String(numYYYY);
+    let strMM = String(numMM);
+    return [strYYYY, strMM];
 }
 
 yyyy = addNumber()[0];
